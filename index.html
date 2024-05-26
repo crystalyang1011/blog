@@ -3,25 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crystal</title>
+  <title>Crystal Yang</title>
   <link rel="stylesheet" href="base.css">
   <style>
+
     body {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
-      background:linear-gradient(to left,tomato,#FBD786)
+     
     }
-    h1 {
-      font-size: 150px;
+    .left {
+      width: 40%;
+      height: 80%;
+    }
+    .left .highlight {
+      position: relative;
+      z-index: 0;
+      display: inline-block;
+      color: tomato;
+      transition: color 250ms, text-shadow 250ms;
+      text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+    }
+    .left .highlight::after{
+      content: '';
+      position: absolute;
+			z-index: -1;
+			bottom: -5px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			height: 3px;
+			background-color: tomato;
+			transition: all 250ms;
+    }
+    .left .highlight:hover {
       color: white;
-      font-family:emoji;
+			text-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
+    }
+    .left .highlight:hover::after{
+      height: 105%;
+			width: 105%;
+    }
+    .left p {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .right {
+      margin-left: 10px;
+      width: 38%;
+      height: 40%;
+      border: 1px solid tomato;
+      border-radius: 5px;
+    }
+    .highlight-half{
+      color: tomato;
+      font-weight: 700;
+      display: inline-block;
+      position: relative;
+    }
+    .highlight-half::before {
+      content:'';
+      position: absolute;
+      bottom:0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background-color: rgba(255, 99, 71, 0.3);
+    }
+    .left b {
+      color: tomato;
+      font-style: italic;
+      text-decoration: underline;
+    }
+    button {
+      border: 1px solid tomato;
+      padding: 5px;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 5px;
+      background-color: tomato;
+      color: white;
+      transition: all 250ms;
+    }
+    button:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .link {
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid tomato;
+      border-radius: 4px 4px 0 0 ;
+      padding: 10px;
+      background: tomato;
+      transition: 0.2s;
+    }
+
+    .link:hover {
+      color: tomato;
+      transform: translate(-3px, -3px);
+      background: white;
+      box-shadow: 3px 3px tomato;
+    }
+
+    .project {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      font-size: 25px;
+      font-weight: 700;
+      border: 2px solid tomato;
+      color: tomato;
+      transform: translate(-3px, -3px);
+      background: white;
+      box-shadow: 3px 3px tomato;
+    }
+
+    .right .first ul{
+      background-color: white;
+    }
+    .right .first ul li {
+      color:tomato;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid tomato;
+      font-weight: 700;
+    }
+    .right .first ul li a {
+      color: tomato;
+    }
+    .right .first ul li a span {
+      font-weight: 400;
     }
   </style>
 </head>
 <body>
-  <h1>Hi, I'm Crystal!</h1>
+  <div class="left">
+    <h1>Hi 👋, I am <span class="highlight">Crystal Yang</span></h1>
+    <p>I am a <span class="highlight-half">Front-End Developer</span> with a major in Software Engineering, currently studying in Chengdu University of Technology.</p>
+    <p>I have been actively involved in <span class="highlight-half">Web Application Development</span> for the past two years, during which I've honed my proficiency in a suite of essential technologies. I am highly skilled in JavaScript, HTML, CSS, and Vue.js, which has empowered me to craft dynamic and user-friendly web interfaces. </p>
+    <p> My hands-on experience extends to a variety of projects, including a <b>travel website</b>, a <b>community eldercare website</b>, and a <b>shopping mobile website</b>. These projects have not only sharpened my technical abilities but also enhanced my capacity to address real-world challenges.</p>
+    <p>I'm always keen to learn and apply new tech in web development. Feel free to <button class="link">Contact</button> me if you have any questions or would like to explore opportunities, collaborate, or share ideas.</p>
+  </div>
+  <div class="right">
+    <div class="first">
+      <a href="#" class="project">My Projects</a>
+      <ul>
+        <li><a href="#">Mobile Music Application <span>(Front-End: Vue2, Typescript)</span></a></li>
+        <li><a href="#">Mobile Shopping Application <span>(Front-End: Vue3, Typescript)</span></a></li>
+        <li><a href="#">Trip Website <span>(Full-Stack: Vue3, Element-Plus, Spring Boot)</span></a></li>
+        <li><a href="#">Elderly Care Website <span>(Full-Stack: Vue2, Element-UI, Spring Boot)</span></a></li>
+        <li><a href="#">Learning Management System Website <span>(Full-Stack: Jquery, Flask)</span></a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
