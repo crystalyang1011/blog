@@ -179,6 +179,10 @@ button:hover {
 }
 .popup-bg .popup table .table-link {
   text-decoration: underline;
+  transition: all 0.3s;
+}
+.popup-bg .popup table .table-link:hover {
+  color: tomato;
 }
 @media screen and (max-width: 750px) {
   body {
@@ -205,7 +209,7 @@ button:hover {
     height: 50px;
     line-height: 20px;
   }
-  .popup {
-    width: 90%;
+  .popup-bg .popup {
+    width: 95%;
   }
 }
