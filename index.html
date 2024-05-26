@@ -6,14 +6,12 @@
   <title>Crystal Yang</title>
   <link rel="stylesheet" href="style/base.css">
   <style>
-
     body {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 100vh;
-     
     }
     .left {
       width: 40%;
@@ -194,6 +192,38 @@
     .table-link {
       text-decoration: underline;
     }
+
+    @media screen and (max-width:750px) {
+      body {
+        padding: 10px;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .left{
+        width: 100%;
+        height: 100%;
+      }
+      .left .link {
+        padding: 5px;
+      }
+      .right{
+        margin-top: 10px;
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .right .first ul li {
+        padding-top: 5px;
+        height: 50px;
+        line-height: 20px;
+      }
+      .popup{
+        width: 90%;
+      }
+
+      
+    }
   </style>
 </head>
 <body>
@@ -208,11 +238,11 @@
     <div class="first">
       <a href="#" class="project">My Projects</a>
       <ul>
-        <li><a href="#">Mobile Music Application <span>(Front-End: Vue2, Typescript)</span></a></li>
-        <li><a href="#">Mobile Shopping Application <span>(Front-End: Vue3, Typescript)</span></a></li>
-        <li><a href="#">Trip Website <span>(Full-Stack: Vue3, Element-Plus, Spring Boot)</span></a></li>
-        <li><a href="#">Elderly Care Website <span>(Full-Stack: Vue2, Element-UI, Spring Boot)</span></a></li>
-        <li><a href="#">Learning Management System Website <span>(Full-Stack: Jquery, Flask)</span></a></li>
+        <li><a href="https://github.com/crystalyang1011/Mobile-Music-Website.git#">Mobile Music Application <span>(Front-End: Vue2, Typescript)</span></a></li>
+        <li><a href="https://github.com/crystalyang1011/Mobile-Shopping-Website.git">Mobile Shopping Application <span>(Front-End: Vue3, Typescript)</span></a></li>
+        <li><a href="https://github.com/crystalyang1011/Trip-Website.git">Trip Website <span>(Full-Stack: Vue3, Element-Plus, Spring Boot)</span></a></li>
+        <li><a href="https://github.com/crystalyang1011/Elderly-Care-Website">Elderly Care Website <span>(Full-Stack: Vue2, Element-UI, Spring Boot)</span></a></li>
+        <li><a href="https://github.com/crystalyang1011/Learning-Management-Sytem.git">Learning Management System Website <span>(Full-Stack: Jquery, Flask)</span></a></li>
       </ul>
     </div>
   </div>
