@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crystal Yang</title>
-  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style/base.css">
   <style>
 
     body {
@@ -144,6 +144,56 @@
     .right .first ul li a span {
       font-weight: 400;
     }
+
+    .popup-bg {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, .1);
+      z-index: 99;
+      display: none;
+    }
+    .popup {
+      position: relative;
+      width: 25%;
+      height: 200px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .close-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 0 10px 0 0;
+    }
+    .popup h2 {
+      height: 30px;
+      color: tomato;
+      border-bottom: 1px solid tomato;
+    }
+    .popup table {
+      margin-top: 10px;
+    }
+    .popup tr {
+      height: 40px;
+      line-height: 40px;
+    }
+    .popup th {
+      width: 100px;
+      color: tomato;
+    }
+    .table-link {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -152,7 +202,7 @@
     <p>I am a <span class="highlight-half">Front-End Developer</span> with a major in Software Engineering, currently studying in Chengdu University of Technology.</p>
     <p>I have been actively involved in <span class="highlight-half">Web Application Development</span> for the past two years, during which I've honed my proficiency in a suite of essential technologies. I am highly skilled in JavaScript, HTML, CSS, and Vue.js, which has empowered me to craft dynamic and user-friendly web interfaces. </p>
     <p> My hands-on experience extends to a variety of projects, including a <b>travel website</b>, a <b>community eldercare website</b>, and a <b>shopping mobile website</b>. These projects have not only sharpened my technical abilities but also enhanced my capacity to address real-world challenges.</p>
-    <p>I'm always keen to learn and apply new tech in web development. Feel free to <button class="link">Contact</button> me if you have any questions or would like to explore opportunities, collaborate, or share ideas.</p>
+    <p>I'm always keen to learn and apply new tech in web development. Feel free to <button class="link" onclick="openContactPopup()">Contact</button> me if you have any questions or would like to explore opportunities, collaborate, or share ideas.</p>
   </div>
   <div class="right">
     <div class="first">
@@ -166,5 +216,35 @@
       </ul>
     </div>
   </div>
+
+  <div id="contact-popup" class="popup-bg">
+    <div class="popup">
+      <button onclick="closeContactPopup()" class="close-btn">X</button>
+      <h2>Contact Me</h2>
+      <table>
+        <tr>
+          <th>Email:</th>
+          <td>2085491819@qq.com</td>
+        </tr>
+        <tr>
+          <th>Github:</th>
+          <td><a class="table-link" href="https://github.com/crystalyang1011">https://github.com/crystalyang1011</a></td>
+        </tr>
+        <tr>
+          <th>Gitee:</th>
+          <td><a class="table-link" href="https://gitee.com/a-kodak-duck">https://gitee.com/a-kodak-duck</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const openContactPopup = () => {
+      document.getElementById("contact-popup").style.display = "block";
+    }
+    const closeContactPopup = () => {
+      document.getElementById("contact-popup").style.display = "none";
+    }
+  </script>
 </body>
 </html>
